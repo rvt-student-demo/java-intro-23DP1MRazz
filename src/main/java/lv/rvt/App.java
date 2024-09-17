@@ -38,27 +38,95 @@ public class App
         double floatingPoint2 = 0.42;
         floatingPoint2 = 1; // Works
         floatingPoint2 = value; // Also works
-        */
+        
 
-        /*
         // Reading input
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         System.out.println(input);
+
+        //Uzdevums 0
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ievadi savu vardu: ");
+        String name = scanner.nextLine();
+        
+        System.out.println("Ievadi savu uzvardu: ");
+        String surname = scanner.nextLine();
+        
+        System.out.println("Ievadi savu grupu: ");
+        String group = scanner.nextLine();
+        
+        System.out.println("Students: " + name + " " + surname + ", grupa: " + group);
+        
+        Scanner scanner = new Scanner(System.in);
+        //Ievadam String un parkonvertejam to par Int citaja mainigaja
+        String input = scanner.nextLine();
+        int inputAsInt = Integer.valueOf(input);
+        
+        System.out.println("Rezultats: " + inputAsInt * 10);
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        int skaitlis = Integer.valueOf(scanner.nextLine());
+        double decimalSkaitlis = Double.valueOf(scanner.nextLine());
+        boolean bool = Boolean.valueOf(scanner.nextLine());
+        
+        System.out.println("summa" + 1 + 2);
+        System.out.println("summa" + (1+2));
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        int number1 = Integer.valueOf(scanner.nextLine());
+        int number2 = Integer.valueOf(scanner.nextLine());
+        int number3 = Integer.valueOf(scanner.nextLine());
+        
+        int sum = number1 + number2 + number3;
+        int mult = number1 * number2 * number3;
+        
+        System.out.println("Summa = " + sum);
+        System.out.println("Reizinājums = " + mult);
+        System.out.println("Vidējais = " + sum / 3.0);
+        
+
+        int calculationWithParentheses = (1 + 1) + 3 * (2 + 5);
+        System.out.println(calculationWithParentheses);
+        
+        int calculationWithoutParentheses = 1 + 1 + 3 * 2 +5;
+        System.out.println(calculationWithoutParentheses);
+        
+        int first = 2;
+        int second = 3;
+        
+        double result = (double) first / second;
+        System.out.println(result);
         */
+
+
+        //Conditional statements and conditional operation
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ievadi savu vardu: ");
-        String name = scanner.nextLine();
+        System.out.println("Give speed: ");
+        int speed = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Ievadi savu uzvardu: ");
-        String surname = scanner.nextLine();
+        if (speed > 120) {
+            System.out.println("Speeding ticket!");
+        }
 
-        System.out.println("Ievadi savu grupu: ");
-        String group = scanner.nextLine();
 
-        System.out.println("Students: " + name + " " + surname + ", grupa: " + group);
+        System.out.println("Give the first number:");
+        int num1 = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int num2 = Integer.valueOf(scanner.nextLine());
+
+        if (num1 > num2) {
+            System.out.println("Greater number is: " + num1);
+        } else if (num2 > num1) {
+            System.out.println("Greater number is: " + num2);
+        } else {
+            System.out.println("The numbers are equal!");
+        }
 
     }
 }
