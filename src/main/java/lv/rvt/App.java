@@ -171,16 +171,26 @@ public class App
         }
         System.out.println("Number of numbers: " + number);
         System.out.println("Sum of the numbers: " + numberSum);
-        */
-
+        
         Scanner scanner = new Scanner(System.in);
-
+        
         int start = Integer.valueOf(scanner.nextLine());
-
+        
         for (int i = start; i < 101; i++) {
             System.out.println(i);
         }
+        */
 
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Last number? ");
+        int end = Integer.valueOf(scanner.nextLine());
 
+        int sum = 0;
+        for (int i = 1; i < (end + 1); i++) {
+            sum += i;
+        }
+
+        System.out.println("The sum is " + sum);
     }
 }
