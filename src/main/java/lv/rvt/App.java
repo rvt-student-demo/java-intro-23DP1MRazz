@@ -100,32 +100,56 @@ public class App
         
         double result = (double) first / second;
         System.out.println(result);
-        */
-
-
+        
+        
         //Conditional statements and conditional operation
-
+        
         Scanner scanner = new Scanner(System.in);
-
+        
         System.out.println("Give speed: ");
         int speed = Integer.valueOf(scanner.nextLine());
-
+        
         if (speed > 120) {
             System.out.println("Speeding ticket!");
         }
-
-
+        
+        
         System.out.println("Give the first number:");
         int num1 = Integer.valueOf(scanner.nextLine());
         System.out.println("Give the second number:");
         int num2 = Integer.valueOf(scanner.nextLine());
-
+        
         if (num1 > num2) {
             System.out.println("Greater number is: " + num1);
         } else if (num2 > num1) {
             System.out.println("Greater number is: " + num2);
         } else {
             System.out.println("The numbers are equal!");
+        }
+        */
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Value of the gift?");
+        int value = Integer.valueOf(scanner.nextLine());
+
+        double tax = 0;
+        if (value >= 1000000) {
+            tax = (142100 + (value - 1000000) * 0.17);
+        } else if (value >= 200000) {
+            tax = (22100 + (value - 200000) * 0.15);
+        } else if (value >= 55000) {
+            tax = (4700 + (value - 55000) * 0.12);
+        } else if (value >= 25000) {
+            tax = (1700 + (value - 25000) * 0.10);
+        } else if (value >= 5000) {
+            tax = (100 + (value - 5000) * 0.08);
+        }
+
+        if (tax == 0) {
+            System.out.println("No tax!");
+        } else {
+            System.out.println("Tax: " + tax);
         }
 
     }
