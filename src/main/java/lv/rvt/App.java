@@ -2,6 +2,8 @@ package lv.rvt;
 
 import java.util.Scanner;
 
+import javax.swing.plaf.TreeUI;
+
 public class App
 {
     public static void main( String[] args )
@@ -126,13 +128,12 @@ public class App
         } else {
             System.out.println("The numbers are equal!");
         }
-        */
-
+        
         Scanner scanner = new Scanner(System.in);
-
+        
         System.out.println("Value of the gift?");
         int value = Integer.valueOf(scanner.nextLine());
-
+        
         double tax = 0;
         if (value >= 1000000) {
             tax = (142100 + (value - 1000000) * 0.17);
@@ -145,12 +146,33 @@ public class App
         } else if (value >= 5000) {
             tax = (100 + (value - 5000) * 0.08);
         }
-
+        
         if (tax == 0) {
             System.out.println("No tax!");
         } else {
             System.out.println("Tax: " + tax);
         }
+        */
+
+        Scanner scanner = new Scanner(System.in);
+
+        int number = 0;
+        int numberSum = 0;
+
+        while (true) {
+            System.out.println("Give a number:");
+            int input = Integer.valueOf(scanner.nextLine());
+
+            if (input == 0) {
+                break;
+            }
+
+            numberSum += input;
+            number++;
+        }
+        System.out.println("Number of numbers: " + number);
+        System.out.println("Sum of the numbers: " + numberSum);
+
 
     }
 }
