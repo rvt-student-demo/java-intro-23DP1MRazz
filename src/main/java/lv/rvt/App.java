@@ -152,26 +152,34 @@ public class App
         } else {
             System.out.println("Tax: " + tax);
         }
-        */
-
+        
         Scanner scanner = new Scanner(System.in);
-
+        
         int number = 0;
         int numberSum = 0;
-
+        
         while (true) {
             System.out.println("Give a number:");
             int input = Integer.valueOf(scanner.nextLine());
-
+            
             if (input == 0) {
                 break;
             }
-
+            
             numberSum += input;
             number++;
         }
         System.out.println("Number of numbers: " + number);
         System.out.println("Sum of the numbers: " + numberSum);
+        */
+
+        Scanner scanner = new Scanner(System.in);
+
+        int start = Integer.valueOf(scanner.nextLine());
+
+        for (int i = start; i < 101; i++) {
+            System.out.println(i);
+        }
 
 
     }
