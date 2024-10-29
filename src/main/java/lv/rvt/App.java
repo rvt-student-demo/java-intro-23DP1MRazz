@@ -1,31 +1,37 @@
 package lv.rvt;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
     public static void main( String[] args ) {
+        Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(3);
-        numbers.add(2);
-        numbers.add(6);
-        numbers.add(-1);
-        numbers.add(5);
-        numbers.add(1);
+        ArrayList<String> listName = new ArrayList<>();
+        ArrayList<Integer> listAge = new ArrayList<>();
 
-        System.out.println("The numbers in the range [0, 5]");
-        printNumbersInRange(numbers, 0, 5);
-
-        System.out.println("The numbers in the range [3, 10]");
-        printNumbersInRange(numbers, 3, 10);
-    }
-
-    public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
-        for (int number : numbers) {
-            if (number >= lowerLimit && number <= upperLimit) {
-                System.out.println(number);
+        while (true) {
+            String info = scanner.nextLine();
+            if (info.equals("")) {
+                break;
+            } else {
+                listName.add(info.split(",")[0]);
+                listAge.add(Integer.valueOf(info.split(",")[1]));
             }
         }
+        scanner.close();
+
+        int sum = 0;
+        String longestName = "";
+        for (int i = 0; i < listName.size(); i++) {
+            sum += listAge.get(i);
+            if (listName.get(i).length() > longestName.length()) {
+                longestName = listName.get(i);
+            }
+        }
+        
+        double avg = (double) sum / listAge.size();
+
+        System.out.println("Longest name: " + longestName);
+        System.out.println("Average of the birth years: " + avg);
     }
 }
