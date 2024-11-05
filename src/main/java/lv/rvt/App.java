@@ -3,9 +3,21 @@ package lv.rvt;
 import java.util.*;
 
 public class App {
-    public static void main( String[] args ) {
-        Product banana = new Product("Banana", 1.1, 13);
+    public static void main(String[] args) {
+        DecreasingCounter counter = new DecreasingCounter(10);
 
-        banana.printProduct();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
+        
+        counter.reset();
+        counter.printValue();
+        
+        counter.decrement();
+        counter.printValue();
     }
 }
