@@ -4,48 +4,54 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        Statistics statistics = new Statistics();
-        Scanner scanner = new Scanner(System.in);
-
-        // System.out.println("\nPart 1\n");
-        // statistics.addNumber(3);
-        // statistics.addNumber(5);
-        // statistics.addNumber(1);
-        // statistics.addNumber(2);
-        // System.out.println("Count: " + statistics.getCount());
-
-        // System.out.println("\nPart 2\n");
-        // System.out.println("Sum: " + statistics.sum());
-        // System.out.println("Average: " + statistics.average());
+        // System.out.println("\nPart 1,2\n");
+        // PaymentCard card = new PaymentCard(50);
+        // System.out.println(card);
+        // card.eatAffordably();
+        // System.out.println(card);
+        // card.eatHeartily();
+        // card.eatAffordably();
+        // // System.out.println(card);
 
         // System.out.println("\nPart 3\n");
-        // System.out.println("Enter numbers:");
-        // int input = scanner.nextInt();
-        // while (input != -1) {
-        //     statistics.addNumber(input);
-        //     input = scanner.nextInt();
-        // }
-        // System.out.println("Sum: " + statistics.sum());
+        // PaymentCard card = new PaymentCard(5);
+        // System.out.println(card);
+        // card.eatHeartily();
+        // System.out.println(card);
+        // card.eatHeartily();
+        // System.out.println(card);
 
-        System.out.println("\nPart 4\n");
-        Statistics even = new Statistics();
-        Statistics odd = new Statistics();
-        System.out.println("Enter numbers:");
-        int input = scanner.nextInt();
-        while (input != -1) {
-            statistics.addNumber(input);
-            if (input % 2 == 0) {
-                even.addNumber(input);
-            }
-            if (input % 2 == 1) {
-                odd.addNumber(input);
-            }
-            input = scanner.nextInt();
-        }
-        System.out.println("Sum: " + statistics.sum());
-        System.out.println("Sum of even numbers: " + even.sum());
-        System.out.println("Sum of odd numbers: " + odd.sum());
+        // System.out.println("\nPart 4\n");
+        // PaymentCard card = new PaymentCard(10);
+        // System.out.println(card);
+        // card.addMoney(15);
+        // System.out.println(card);
+        // card.addMoney(10);
+        // System.out.println(card);
+        // card.addMoney(200);
+        // System.out.println(card);
 
-        scanner.close();
+        // System.out.println("\nPart 5\n");
+        // PaymentCard card = new PaymentCard(10);
+        // System.out.println("Paul: " + card);
+        // card.addMoney(-15);
+        // System.out.println("Paul: " + card);
+
+        System.out.println("\nPart 6\n");
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
     }
 }
