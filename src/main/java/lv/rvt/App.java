@@ -1,37 +1,20 @@
 package lv.rvt;
 
-import java.io.BufferedReader;
 import java.util.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        Timer timer = new Timer();
 
-        ArrayList<Person> persons = new ArrayList<>();
+        while (true) {
+            System.out.println(timer);
+            timer.advance();
 
-        BufferedReader reader = Utils.getReader("persons.csv");
-        String line;
-        
-        reader.readLine();
-        int ageSum = 0;
-        while((line = reader.readLine()) != null) {
-            String[] parts = line.split(", ");
-            
-            String name = parts[0];
-            int age = Integer.valueOf(parts[1]);
-            int weight = Integer.valueOf(parts[2]);
-            int height = Integer.valueOf(parts[3]);
-            
-            ageSum += age;
-            
-            Person prsn = new Person(name, age, weight, height);
-            persons.add(prsn);
+            try {
+                Thread.sleep(10);
+            } catch (Exception e) {
+
+            }
         }
-        reader.close();
-        
-        for (Person person : persons) {
-            System.out.println(person);
-        }
-
-        System.out.println(ageSum / persons.size());
     }
 }
