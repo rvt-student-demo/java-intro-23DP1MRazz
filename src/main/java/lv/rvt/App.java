@@ -1,14 +1,26 @@
 package lv.rvt;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ArrayList<Person> persons = PersonManager.getPersonList();
+        Scanner scanner = new Scanner(System.in);
 
-        for (Person person : persons) {
-            System.out.println(person);
-        }
+
+
+        System.out.println("Enter name:");
+        String name = scanner.nextLine();
+        System.out.println("Enter age:");
+        int age = scanner.nextInt();
+        System.out.println("Enter weight:");
+        double weight = scanner.nextDouble();
+        System.out.println("Enter height:");
+        double height = scanner.nextDouble();
+
+        Person person = new Person(name, age, weight, height);
+        PersonManager.addPerson(person);
     }
 }

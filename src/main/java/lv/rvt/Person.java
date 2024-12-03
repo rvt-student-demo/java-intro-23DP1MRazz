@@ -7,10 +7,10 @@ public class Person {
     private String name;
     private int age;
     private String group;
-    private int weight;
-    private int height;
+    private double weight;
+    private double height;
 
-    public Person(String initialName, int initialAge, int initialWeight, int initialHeight) {
+    public Person(String initialName, int initialAge, double initialWeight, double initialHeight) {
         this.age = initialAge;
         this.weight = initialWeight;
         this.height = initialHeight;
@@ -22,8 +22,11 @@ public class Person {
     }
     
     public String toString() {
-        return this.name + ", BMI: " + this.bodyMassIndex()
-            + ", maximum heart rate: " + this.maximumHeartRate();
+        return String.format("Name: %s, age: %d, weight: %.2f, height %.2f", this.name, this.age, this.weight, this.height);
+    }
+
+    public String toCsvRow() {
+        return String.format("%s, %d, %.2f, %.2f", this.name, this.age, this.weight, this.height);
     }
 
     public double maximumHeartRate() {
