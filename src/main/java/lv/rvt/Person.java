@@ -35,13 +35,17 @@ public class Person {
         return this.weight / (heigthPerHundred * heigthPerHundred);
     }
     
-    // public int getAge() {
-    //     return this.age;
-    // }
+    public int getAge() {
+        return this.age;
+    }
     
-    // public String getName() {
-    //     return this.name;
-    // }
+    public String getName() {
+        return this.name;
+    }
+
+    public double getWeight() {
+        return this.weight;
+    }
     
     // public void setAge(int age) {
     //     this.age = age;
@@ -77,8 +81,8 @@ public class Person {
     //     this.height = newHeight;
     // }
     
-    // public void setWeight (int newWeight) {
-    //     this.weight = newWeight;
-    // }
+    public void setWeight (double newWeight) {
+        this.weight = newWeight;
+    }
 
 }
