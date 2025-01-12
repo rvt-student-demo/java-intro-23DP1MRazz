@@ -7,17 +7,19 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+        Box box = new  Box( 2.5, 5.0, 6.0 ) ;
+        System.out.println( "Area: "  + box.area() + " volume: " + box.volume() );
+
+        Box box2 = new Box(box);
+        System.out.println( "Area: "  + box2.area() + " volume: " + box2.volume() );
         
-        System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
-        System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
+        Box smallBox = box.smallerBox(box);
+        System.out.println( "Area: "  + smallBox.area() + " volume: " + smallBox.volume() );
 
-        System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));  //71600
-        System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));   //35400
+        Box bigBox = box.biggerBox(box);
+        System.out.println( "Area: "  + bigBox.area() + " volume: " + bigBox.volume() );
 
-        System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
-        System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true  
+        System.out.println(smallBox.nests(bigBox));
+        System.out.println(bigBox.nests(box));
     }
 }
