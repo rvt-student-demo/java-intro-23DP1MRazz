@@ -8,7 +8,15 @@ public class ProductWarehouse extends Warehouse{
         this.name = name;
     }
 
+    public void setName(String newName) {
+        this.name = name;
+    }
+
     public String getName() {
         return this.name;
+    }
+
+    public String toString() {
+        return "Juice: " + super.toString();
     }
 }
