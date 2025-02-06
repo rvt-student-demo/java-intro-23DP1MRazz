@@ -9,7 +9,7 @@ public class ProductWarehouse extends Warehouse{
     }
 
     public void setName(String newName) {
-        this.name = name;
+        this.name = newName;
     }
 
     public String getName() {
