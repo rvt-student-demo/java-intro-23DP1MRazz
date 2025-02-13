@@ -7,11 +7,26 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
-        juice.takeFromWarehouse(11.3);
-        juice.addToWarehouse(1.0);
-        //System.out.println(juice.history()); // [1000.0, 988.7, 989.7]
+        Box box = new Box(10);
+
+        box.add(new Book("Fyodor Dostoevsky", "Crime and Punishment", 2)) ;
+        box.add(new Book("Robert Martin", "Clean Code", 1));
+        box.add(new Book("Kent Beck", "Test Driven Development", 0.7));
+    
+        box.add(new CD("Pink Floyd", "Dark Side of the Moon", 1973));
+        box.add(new CD("Wigwam", "Nuclear Nightclub", 1975));
+        box.add(new CD("Rendezvous Park", "Closer to Being Here", 2012));
+
+        System.out.println(box);
         
-        juice.printAnalysis();
+        Box biggerBox = new Box(20);
+        
+        biggerBox.add(new Book("Pushkin", "Ruslan and Ludmila", 2));
+        biggerBox.add(box);
+        biggerBox.add(box);
+        System.out.println(biggerBox);
+        
+        // biggerBox.add(biggerBox);
+        // System.out.println(biggerBox);
     }
 }
